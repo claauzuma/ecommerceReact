@@ -1,6 +1,8 @@
-import React, {useState,useEffect} from 'react'
+import React, {useState,useEffect, useContext} from 'react'
+import { CartContext } from '../context/CartContext'
 
-const ItemCount = ({descripcion ,initial, stock, onAdd}) => {
+const ItemCount = ({descripcion ,initial, producto, onAdd}) => {
+
 
 
 const [contador,setContador] = useState(1)
@@ -13,24 +15,46 @@ const decrementar=() => {
 }
 
 const incrementar=() => {
-    if(contador<stock) {
-        setContador(contador+1)
+    if(descripcion != "Eliminar unidad") {
+        if(contador<producto.stock) {
+            setContador(contador+1)
+        }
+
     }
+    else {
+        if(contador<producto.cantidad) {
+            setContador(contador+1)
+        }
+
+    }
+ 
 }
 
-const agregarCarrito = () => {
-    onAdd(contador)
+const ejecutar = () => {
+    if(descripcion !="Eliminar unidad") {
+        onAdd(contador)
+    }
+    else 
+    {
+
+        alert("Se eliminan unidades")
+        producto.cantidad = producto.cantidad - contador
+        
+        
+    }
+    
 }
 
 
   return (<>
-
    <p>{contador}</p>
-   <button onClick={decrementar}> - </button>
-   <button onClick={agregarCarrito}>{descripcion}</button>
-   <button onClick={incrementar}> + </button>
 
+   <button onClick={decrementar}> - </button>
+   <button onClick={ejecutar}>{descripcion}</button>
+   <button onClick={incrementar}> + </button>
   
+
+
   
   </>
 

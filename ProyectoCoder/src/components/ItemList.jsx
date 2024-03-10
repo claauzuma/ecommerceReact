@@ -10,7 +10,6 @@ const ItemList = ({ productos}) => {
         <>
             <div className='itemListContainer'>
 
-                <h1>"Hola"</h1>
 
                 {
                     productos.map((producto) => {

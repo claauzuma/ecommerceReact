@@ -15,6 +15,7 @@ const Checkout = () => {
     const [error, setError] = useState("");
     const [ordenId, setOrdenId] = useState("");
     const { cart, total, totalCantidad, vaciarCarrito } = useContext(CartContext)
+    const [completado, setCompletado] = useState(false)
 
 
     const manejadorFormulario = (event) => {
@@ -64,6 +65,7 @@ const Checkout = () => {
                         setError("")
                         setOrdenId(docRef.id)
                         vaciarCarrito()
+                        setCompletado(true)
                     })
                     .catch((error) => {
                         console.log(error)
@@ -124,7 +126,10 @@ const Checkout = () => {
 
                     {ordenId && <strong> Se ha completado la compra con la orden {ordenId}</strong>}
 
-                    <button type='submit'> Completar compra </button>
+                     {
+                        !completado && <button type='submit'> Completar compra </button>
+
+                     } 
 
 
 

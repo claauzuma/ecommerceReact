@@ -7,7 +7,7 @@ const ItemCarrito = ({producto}) => {
     return (
     <>
   
-    <h1>{producto.nombre}</h1>
+    <h3>{producto.nombre}</h3>
     <img src={producto.img} alt={producto.nombre} />
 
    

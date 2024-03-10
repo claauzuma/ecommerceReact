@@ -1,3 +1,12 @@
+.navbar .navbar-brand {
+    font-size: 2.5em; /* Tamaño de la fuente en em */
+  }
+
+.navbar-nav .nav-link {
+    margin-right: 10px; /* Ajusta el valor según el espacio que desees entre los elementos */
+  }
+  
+
 a {
     text-decoration: none;
 
@@ -8,3 +17,25 @@ a {
 .active {
     color: red
 }
+
+.navbar-nav .nav-link {
+    color: #ffffff; /* Color del texto */
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #ffcc00; /* Color del texto al pasar el cursor */
+  }
+  
+  /* Cambiar color del fondo al pasar el cursor */
+  .navbar-nav .nav-link:hover {
+    background-color: goldenrod;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 18px; /* Tamaño de la fuente */
+  }
+  
+
+  
+
+

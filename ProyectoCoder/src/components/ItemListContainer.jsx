@@ -38,15 +38,10 @@ const ItemListContainer = () => {
 
 
 
-
-
-
-
-
   return (
 
     <>
-      <h1>"Hola"</h1>
+  
       <div className='itemContainer'>
 
         {productos.length == 0 ? <h1> CARGANDO </h1> :
