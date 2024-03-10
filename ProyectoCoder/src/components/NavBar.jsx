@@ -12,11 +12,11 @@ const NavBar = () => {
     
 
 <>
-<h1>Hola </h1>
+
 
 <nav class="navbar navbar-expand-lg navbar-light bg-info">
   <div class="container">
-  <span class="navbar-brand">ZumaFit</span>
+  <span class="navbar-brand">ZUMA FIT</span>
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-brand mb-0 h1"></span>
     </button>
@@ -28,17 +28,22 @@ const NavBar = () => {
          
         </li>
         <li class="nav-item">
-        <NavLink to={"categoria/consolas"}  class="nav-link" aria-current="page">Consolas</NavLink>
+        <NavLink to={"categoria/suplementos"}  class="nav-link" aria-current="page">Suplementos</NavLink>
       
         </li>
         <li class="nav-item">
-        <NavLink to={"categoria/celulares"}  class="nav-link" aria-current="page">Celulares</NavLink>
+        <NavLink to={"categoria/pesasrusas"}  class="nav-link" aria-current="page">Pesas Rusas</NavLink>
       
         </li>
         <li class="nav-item">
-        <NavLink to={"categoria/pcs"}  class="nav-link" aria-current="page">Pcs</NavLink>
+        <NavLink to={"categoria/ropa"}  class="nav-link" aria-current="page">Ropa</NavLink>
       
         </li>
+        <li class="nav-item">
+        <NavLink to={"carrito"}  class="nav-link" aria-current="page">Carrito</NavLink>
+      
+        </li>
+        
 
         
         

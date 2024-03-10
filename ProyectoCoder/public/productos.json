@@ -22,7 +22,7 @@
 "description": "La consola mas buscada",
 "img" :"/assets/img/pcgamer.jpg",
 "categoria": "pcs"}
-,
+, 
 {"id":4,
 "nombre" :"Samsung s24 ultra",
 "precio":900,

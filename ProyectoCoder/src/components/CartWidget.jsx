@@ -1,13 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react';
+import { CartContext } from '../context/CartContext';
+
 
 const CartWidget = () => {
+  const { totalQuantity } = useContext(CartContext);
+
   return (
     <>
-    <img src="./carrito.png" alt="" />
-    <p>0</p>
+      <p>Carrito</p>
+      <p>{totalQuantity}</p>
     </>
+  );
+};
 
-  )
-}
-
-export default CartWidget
+export default CartWidget;

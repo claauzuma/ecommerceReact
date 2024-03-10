@@ -1,9 +1,10 @@
 import React, {useState,useEffect} from 'react'
 
-const ItemCount = ({initial, stock}) => {
+const ItemCount = ({descripcion ,initial, stock, onAdd}) => {
 
 
 const [contador,setContador] = useState(1)
+const[carrito,setCarrito] = useState([]);
 
 const decrementar=() => {
     if(contador>initial) {
@@ -18,7 +19,7 @@ const incrementar=() => {
 }
 
 const agregarCarrito = () => {
-    alert("Agregaste esta cantidad de productos " + contador)
+    onAdd(contador)
 }
 
 
@@ -26,7 +27,7 @@ const agregarCarrito = () => {
 
    <p>{contador}</p>
    <button onClick={decrementar}> - </button>
-   <button onClick={agregarCarrito}>Agregar al carrito</button>
+   <button onClick={agregarCarrito}>{descripcion}</button>
    <button onClick={incrementar}> + </button>
 
   

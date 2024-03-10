@@ -3,6 +3,9 @@ import Item from './Item'
 import './ItemListPost.css'
 
 const ItemList = ({ productos}) => {
+
+
+    console.log("Renderizado Productos")
     return (
         <>
             <div className='itemListContainer'>
